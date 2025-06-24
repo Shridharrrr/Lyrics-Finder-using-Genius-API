@@ -1,5 +1,4 @@
 import streamlit as st
-from dotenv import load_dotenv
 import requests
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -10,8 +9,7 @@ st.set_page_config(page_title="Taylor Swift Lyrics Explorer", page_icon="🎤")
 st.title("🎤 Taylor Swift Lyrics Explorer")
 st.write("Discover lyrics and visualize word patterns in Taylor Swift songs")
 
-load_dotenv()
-GENIUS_API_KEY = os.getenv("GENIUS_API_KEY")
+GENIUS_API_KEY = st.secrets["GENIUS_API_KEY"]
 GENIUS_API_URL = "https://api.genius.com"
 
 def search_song(title, artist="Taylor+Swift"):

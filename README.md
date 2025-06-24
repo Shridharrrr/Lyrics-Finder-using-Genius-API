@@ -1,4 +1,4 @@
-# 🎤 Taylor Swift Lyrics Explorer
+# 🎤 Lyrics Explorer
 
 A fun and interactive **Streamlit** app that lets you:
 
